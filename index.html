@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBills — Professional GST Invoicing for Indian Businesses</title>
+  <meta name="description" content="Create beautiful, GST-compliant invoices in seconds. 17 PDF templates, 23 Indian languages, AI bill scanner, payment tracking. Free for Android & Windows.">
+  <meta name="keywords" content="GST invoice app, billing software India, invoice generator, GST billing, free invoice app, Android invoice, Windows billing">
+  <meta name="author" content="GTR911">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MyBills — Professional GST Invoicing">
+  <meta property="og:description" content="Create beautiful, GST-compliant invoices in seconds. 17 templates, 23 languages. Free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gtr911.github.io/MyBills/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">M</div>
+      MyBills
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#templates" data-i18n="nav_templates">Templates</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+      <a href="#languages" data-i18n="nav_languages">Languages</a>
+      <select class="nav-lang-select" id="langSelect" aria-label="Select Language"></select>
+      <a href="#download" class="nav-cta" data-i18n="hero_cta">Download Free</a>
+    </div>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="particles" id="particles"></div>
+    <div class="hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">Trusted by Indian businesses</div>
+        <h1>
+          <span data-i18n="hero_tagline_before">Professional invoicing,</span><br>
+          <span class="gradient-text" data-i18n="hero_tagline_highlight">simplified.</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">Create beautiful, GST-compliant invoices in seconds. Track payments, manage clients, and grow your business — all from your phone or desktop.</p>
+        <div class="hero-actions">
+          <a href="#download" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="hero_cta">Download Free</span>
+          </a>
+          <a href="#features" class="btn-secondary">
+            <span data-i18n="hero_cta2">See Features</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value count-up" data-target="17">0</div>
+            <div class="hero-stat-label" data-i18n="hero_stat1_label">PDF Templates</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value count-up" data-target="23">0</div>
+            <div class="hero-stat-label" data-i18n="hero_stat2_label">Languages</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">100%</div>
+            <div class="hero-stat-label" data-i18n="hero_stat3_label">Free to Start</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Phone Mockup -->
+      <div class="hero-visual">
+        <div class="hero-phone-mockup">
+          <div class="hero-phone-screen">
+            <div class="hero-phone-notch"></div>
+            <div class="hero-phone-content">
+              <div class="mock-header">Dashboard</div>
+              <div class="mock-card">
+                <div class="mock-stat-row">
+                  <div class="mock-stat green">
+                    <div class="mock-stat-val">₹2.4L</div>
+                    <div class="mock-stat-label">Revenue</div>
+                  </div>
+                  <div class="mock-stat orange">
+                    <div class="mock-stat-val">₹48K</div>
+                    <div class="mock-stat-label">Pending</div>
+                  </div>
+                  <div class="mock-stat purple">
+                    <div class="mock-stat-val">156</div>
+                    <div class="mock-stat-label">Invoices</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-card" style="flex:1">
+                <div style="font-size:12px;font-weight:700;color:#1A1A2E;margin-bottom:10px;">Recent Invoices</div>
+                <div class="mock-invoice-row">
+                  <div class="mock-invoice-dot paid"></div>
+                  <div class="mock-invoice-text">
+                    <div class="mock-invoice-name">Sharma Traders</div>
+                    <div class="mock-invoice-sub">INV-001 · Today</div>
+                  </div>
+                  <div class="mock-invoice-amount">₹12,500</div>
+                </div>
+                <div class="mock-invoice-row">
+                  <div class="mock-invoice-dot pending"></div>
+                  <div class="mock-invoice-text">
+                    <div class="mock-invoice-name">Patel Electronics</div>
+                    <div class="mock-invoice-sub">INV-002 · Yesterday</div>
+                  </div>
+                  <div class="mock-invoice-amount">₹8,200</div>
+                </div>
+                <div class="mock-invoice-row">
+                  <div class="mock-invoice-dot paid"></div>
+                  <div class="mock-invoice-text">
+                    <div class="mock-invoice-name">Singh Hardware</div>
+                    <div class="mock-invoice-sub">INV-003 · 2 days ago</div>
+                  </div>
+                  <div class="mock-invoice-amount">₹24,700</div>
+                </div>
+                <div class="mock-invoice-row" style="border:none;">
+                  <div class="mock-invoice-dot paid"></div>
+                  <div class="mock-invoice-text">
+                    <div class="mock-invoice-name">Kumar & Sons</div>
+                    <div class="mock-invoice-sub">INV-004 · 3 days ago</div>
+                  </div>
+                  <div class="mock-invoice-amount">₹6,350</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="floating-badge top-right">
+          <div class="floating-badge-icon green">✓</div>
+          <div>
+            <div class="floating-badge-text">Invoice Paid!</div>
+            <div class="floating-badge-sub">₹12,500 received</div>
+          </div>
+        </div>
+        <div class="floating-badge bottom-left">
+          <div class="floating-badge-icon blue">📊</div>
+          <div>
+            <div class="floating-badge-text">Revenue Up 23%</div>
+            <div class="floating-badge-sub">This month</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURES ═══════════ -->
+  <section id="features">
+    <div class="section-header reveal">
+      <h2 data-i18n="section_features">Everything you need to run your billing</h2>
+      <p data-i18n="section_features_sub">From invoice creation to payment tracking — MyBills handles it all with zero learning curve.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon teal">📄</div>
+        <h3 data-i18n="f1_title">GST Invoicing</h3>
+        <p data-i18n="f1_desc">Create professional, GST-compliant invoices with automatic tax calculation. Choose from 17 beautifully designed PDF templates.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon orange">⚡</div>
+        <h3 data-i18n="f2_title">Flash Calculator</h3>
+        <p data-i18n="f2_desc">Point-of-sale speed calculator with running tape. Ring up items instantly and convert totals to invoices with one tap.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon blue">💰</div>
+        <h3 data-i18n="f3_title">Payment Tracking</h3>
+        <p data-i18n="f3_desc">Track paid, pending, and overdue invoices at a glance. Never miss a payment with smart status tracking.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon purple">🤖</div>
+        <h3 data-i18n="f4_title">AI Bill Scanner</h3>
+        <p data-i18n="f4_desc">Scan purchase bills with your camera. Our AI powered by Google Gemini extracts vendor, items, and amounts automatically.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon teal">☁️</div>
+        <h3 data-i18n="f5_title">Cloud Backup</h3>
+        <p data-i18n="f5_desc">Encrypted auto-backup to Google Drive. Your business data is safe, synced, and always recoverable.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon pink">👥</div>
+        <h3 data-i18n="f6_title">Client Management</h3>
+        <p data-i18n="f6_desc">Manage clients with complete history, statements of account, and per-client tax configuration.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon indigo">📋</div>
+        <h3 data-i18n="f7_title">Estimates & Quotations</h3>
+        <p data-i18n="f7_desc">Create professional quotations, track their status, and convert accepted estimates to invoices instantly.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon orange">📊</div>
+        <h3 data-i18n="f8_title">Dashboard & Analytics</h3>
+        <p data-i18n="f8_desc">Revenue trends, collection rates, top clients, cash flow summary — see your business health at a glance.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon blue">🌐</div>
+        <h3 data-i18n="f9_title">23 Indian Languages</h3>
+        <p data-i18n="f9_desc">Full localization in 23 languages including Hindi, Tamil, Bengali, Telugu, Marathi, and more. Invoice in your language.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon purple">📱</div>
+        <h3 data-i18n="f10_title">Multi-Device Support</h3>
+        <p data-i18n="f10_desc">Unique device codes prevent duplicate invoice numbers across multiple phones and computers.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon teal">🏷️</div>
+        <h3 data-i18n="f11_title">Product Catalog</h3>
+        <p data-i18n="f11_desc">Maintain your products and services catalog with HSN/SAC codes, pricing, and quick add to invoices.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon pink">📤</div>
+        <h3 data-i18n="f12_title">GST Filing Export</h3>
+        <p data-i18n="f12_desc">Export monthly or quarterly GST data directly to Google Drive — ready for your accountant.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TEMPLATES ═══════════ -->
+  <section id="templates">
+    <div class="section-header reveal">
+      <h2 data-i18n="section_templates">17 Stunning PDF Templates</h2>
+      <p data-i18n="section_templates_sub">From Modern to Classic, Elegant to Bold — pick the template that matches your brand.</p>
+    </div>
+    <div class="template-marquee-wrap" style="overflow:hidden;">
+      <div class="template-marquee" id="templateMarquee">
+        <!-- Doubled for seamless loop -->
+        <div class="template-chip">✨ Modern</div>
+        <div class="template-chip">🏛️ Classic</div>
+        <div class="template-chip">◻️ Minimal</div>
+        <div class="template-chip">👔 Executive</div>
+        <div class="template-chip">🏢 Corporate</div>
+        <div class="template-chip">💎 Elegant</div>
+        <div class="template-chip">🔥 Bold</div>
+        <div class="template-chip">📐 Professional</div>
+        <div class="template-chip">🎨 Creative</div>
+        <div class="template-chip">🚀 Startup</div>
+        <div class="template-chip">⭐ Premium</div>
+        <div class="template-chip">🧊 Clean</div>
+        <div class="template-chip">📎 Formal</div>
+        <div class="template-chip">📄 Layout B</div>
+        <div class="template-chip">📃 Layout C</div>
+        <div class="template-chip">📑 Layout D</div>
+        <div class="template-chip">📝 Layout E</div>
+        <!-- Repeat for infinite scroll -->
+        <div class="template-chip">✨ Modern</div>
+        <div class="template-chip">🏛️ Classic</div>
+        <div class="template-chip">◻️ Minimal</div>
+        <div class="template-chip">👔 Executive</div>
+        <div class="template-chip">🏢 Corporate</div>
+        <div class="template-chip">💎 Elegant</div>
+        <div class="template-chip">🔥 Bold</div>
+        <div class="template-chip">📐 Professional</div>
+        <div class="template-chip">🎨 Creative</div>
+        <div class="template-chip">🚀 Startup</div>
+        <div class="template-chip">⭐ Premium</div>
+        <div class="template-chip">🧊 Clean</div>
+        <div class="template-chip">📎 Formal</div>
+        <div class="template-chip">📄 Layout B</div>
+        <div class="template-chip">📃 Layout C</div>
+        <div class="template-chip">📑 Layout D</div>
+        <div class="template-chip">📝 Layout E</div>
+      </div>
+    </div>
+    <div class="template-count reveal">
+      <span class="count-up" data-target="17">0</span>
+      <p>GST-compliant, print-ready templates — and growing</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ DOWNLOAD ═══════════ -->
+  <section id="download">
+    <div class="section-header reveal">
+      <h2 data-i18n="section_download">Download MyBills</h2>
+      <p data-i18n="section_download_sub">Available on Android and Windows. Free to start, no credit card required.</p>
+    </div>
+    <div class="download-grid">
+      <!-- Android -->
+      <div class="download-card available reveal reveal-delay-1" onclick="window.open('https://play.google.com/store/apps/details?id=com.gtr911.invoix','_blank')">
+        <div class="download-card-icon android">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#34A853"><path d="M17.523 2.417l-1.964 3.403A8.96 8.96 0 0012 4.5a8.96 8.96 0 00-3.559 1.32L6.477 2.417a.5.5 0 10-.866.5L7.55 6.22A9.03 9.03 0 003 14h18a9.03 9.03 0 00-4.55-7.78l1.94-3.303a.5.5 0 10-.867-.5zM8.5 11a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zM3 15.5v5A1.5 1.5 0 004.5 22h1A1.5 1.5 0 007 20.5V15.5H3zm14 0v5a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5V15.5h-4z"/></svg>
+        </div>
+        <h3 data-i18n="dl_android">Android</h3>
+        <p data-i18n="dl_android_sub">Get it on Google Play</p>
+        <a href="https://play.google.com/store/apps/details?id=com.gtr911.invoix" target="_blank" class="download-btn" onclick="event.stopPropagation()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Play
+        </a>
+      </div>
+
+      <!-- Windows -->
+      <div class="download-card available reveal reveal-delay-2" onclick="window.location.href='downloads/MyBills-Setup.exe'">
+        <div class="download-card-icon windows">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#0078D4"><path d="M3 12V6.5l8-1.1V12H3zm9-6.8V12h9V4l-9 1.2zM12 13v6.7L21 21v-8h-9zm-1 0H3v5.5l8 1.1V13z"/></svg>
+        </div>
+        <h3 data-i18n="dl_windows">Windows</h3>
+        <p data-i18n="dl_windows_sub">Download for PC</p>
+        <a href="downloads/MyBills-Setup.exe" class="download-btn" onclick="event.stopPropagation()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download .exe
+        </a>
+      </div>
+
+      <!-- macOS -->
+      <div class="download-card coming-soon reveal reveal-delay-3">
+        <div class="download-card-icon macos">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#555"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </div>
+        <h3 data-i18n="dl_macos">macOS</h3>
+        <p data-i18n="dl_macos_sub">Coming Soon</p>
+        <span class="badge-coming" data-i18n="dl_coming">Coming Soon</span>
+      </div>
+
+      <!-- Linux -->
+      <div class="download-card coming-soon reveal reveal-delay-4">
+        <div class="download-card-icon linux">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.17.333.472.467.766.556l.048.016c.267.094.56.197.868.42.34.249.666.589 1.138.717.238.065.478.063.716.011a2.51 2.51 0 00.691-.228c.121-.057.24-.122.366-.146.165-.028.363-.004.578.072.163.045.332.063.504.054l.025-.001c.088-.003.177-.011.266-.024a2.25 2.25 0 00.543-.152c.053-.021.107-.039.161-.05a.93.93 0 01.189-.019c.071-.001.143.007.217.018a4.62 4.62 0 01.555.131c.252.068.514.095.782.064.438-.05.862-.298 1.122-.694.127-.179.253-.398.349-.645.093-.225.18-.537.284-.756.183-.398.525-.6.844-.775.297-.158.601-.32.681-.636a.455.455 0 00-.021-.282.55.55 0 00-.146-.224c-.088-.085-.186-.17-.268-.263-.103-.101-.21-.265-.3-.449-.093-.173-.194-.4-.249-.66-.033-.198-.36-3.083-.555-3.718-.25-.81-.53-1.473-.83-2.058-.299-.579-.62-1.076-1.027-1.554-.749-.88-1.32-1.78-1.413-2.957-.052-.668.238-1.358.58-2.091 1.183-2.551 2.046-5.072-.11-6.87A4.225 4.225 0 0012.504 0z"/></svg>
+        </div>
+        <h3 data-i18n="dl_linux">Linux</h3>
+        <p data-i18n="dl_linux_sub">Coming Soon</p>
+        <span class="badge-coming" data-i18n="dl_coming">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRICING ═══════════ -->
+  <section id="pricing">
+    <div class="section-header reveal">
+      <h2 data-i18n="section_pricing">Simple, transparent pricing</h2>
+      <p data-i18n="section_pricing_sub">Start free. Upgrade when you're ready.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Free -->
+      <div class="pricing-card reveal reveal-delay-1">
+        <h3 data-i18n="pricing_free">Free</h3>
+        <div class="pricing-price" data-i18n="pricing_free_price">₹0</div>
+        <div class="pricing-desc" data-i18n="pricing_free_desc">Perfect for getting started</div>
+        <ul class="pricing-features">
+          <li data-i18n="pricing_f1">Up to 10 invoices (ad-free)</li>
+          <li data-i18n="pricing_f2">Up to 30 invoices total</li>
+          <li data-i18n="pricing_f3">All 17 PDF templates</li>
+          <li data-i18n="pricing_f4">Client & product management</li>
+          <li data-i18n="pricing_f5">Google Drive backup</li>
+          <li data-i18n="pricing_f6">23 languages</li>
+        </ul>
+      </div>
+      <!-- Premium -->
+      <div class="pricing-card premium reveal reveal-delay-2">
+        <h3 data-i18n="pricing_premium">Premium</h3>
+        <div class="pricing-price" data-i18n="pricing_premium_price">Affordable</div>
+        <div class="pricing-desc" data-i18n="pricing_premium_desc">For growing businesses</div>
+        <ul class="pricing-features">
+          <li data-i18n="pricing_p1">Unlimited invoices & estimates</li>
+          <li data-i18n="pricing_p2">No ads ever</li>
+          <li data-i18n="pricing_p3">Priority support</li>
+          <li data-i18n="pricing_p4">All free features included</li>
+          <li data-i18n="pricing_p5">Desktop app access</li>
+          <li data-i18n="pricing_p6">GST filing export</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LANGUAGES ═══════════ -->
+  <section id="languages">
+    <div class="section-header reveal">
+      <h2 data-i18n="section_languages">Available in 23 Indian Languages</h2>
+      <p data-i18n="section_languages_sub">We believe every business owner deserves tools in their own language.</p>
+    </div>
+    <div class="languages-grid reveal" id="languagesGrid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- ═══════════ FINAL CTA ═══════════ -->
+  <section class="cta-section">
+    <div class="reveal">
+      <h2 data-i18n="section_cta">Ready to simplify your billing?</h2>
+      <p data-i18n="section_cta_sub">Join thousands of Indian businesses using MyBills. Download now — it's free.</p>
+      <a href="#download" class="btn-primary">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="cta_button">Download Now</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:skripter14@gmail.com" data-i18n="footer_contact">Contact</a>
+      <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+      <a href="#" data-i18n="footer_terms">Terms of Service</a>
+    </div>
+    <p class="footer-made" data-i18n="footer_made">Made with ❤️ in India</p>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 MyBills. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
