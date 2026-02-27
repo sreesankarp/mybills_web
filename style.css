@@ -715,6 +715,28 @@ section {
   box-shadow: 0 4px 16px var(--teal-glow);
   transform: translateY(-1px);
 }
+.smartscreen-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  line-height: 1.5;
+  color: #92400E;
+  text-align: left;
+}
+.smartscreen-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #D97706;
+}
+.smartscreen-note strong {
+  color: #78350F;
+}
 
 /* ── Pricing Section ── */
 #pricing { background: var(--grey-50); }
