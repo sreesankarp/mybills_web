@@ -277,4 +277,12 @@
     });
   }
 
+  // ── SmartScreen Modal: close on Escape ──
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      const modal = document.getElementById('smartscreen-modal');
+      if (modal) modal.classList.remove('active');
+    }
+  });
+
 })();
