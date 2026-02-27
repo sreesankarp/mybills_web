@@ -386,6 +386,12 @@ body {
 .desktop-dots .dot.red { background: #FF5F57; }
 .desktop-dots .dot.yellow { background: #FFBD2E; }
 .desktop-dots .dot.green { background: #28CA41; }
+.desktop-title {
+  margin-left: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+}
 .desktop-screen {
   border: 3px solid var(--navy);
   border-top: none;
@@ -394,8 +400,13 @@ body {
   background: var(--grey-100);
   line-height: 0;
 }
-.desktop-screen img {
+.desktop-slider {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.desktop-slider img {
   width: 100%;
+  flex-shrink: 0;
   height: auto;
   display: block;
 }
@@ -438,6 +449,25 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.slide-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grey-300);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slide-dot.active {
+  background: var(--teal);
+  width: 24px;
+  border-radius: 4px;
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }

@@ -89,7 +89,7 @@
       <!-- Right: Device Showcase -->
       <div class="hero-visual">
         <div class="device-showcase">
-          <!-- Desktop/Laptop Frame -->
+          <!-- Desktop/Laptop Frame with sliding screenshots -->
           <div class="desktop-frame">
             <div class="desktop-bezel">
               <div class="desktop-dots">
@@ -97,9 +97,13 @@
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
               </div>
+              <div class="desktop-title">MyBills</div>
             </div>
             <div class="desktop-screen">
-              <img src="screenshots/desktop.jpg" alt="MyBills Desktop App" loading="eager">
+              <div class="desktop-slider" id="desktopSlider">
+                <img src="screenshots/desktop_dashboard.jpg" alt="MyBills Dashboard" loading="eager">
+                <img src="screenshots/desktop_invoices.jpg" alt="MyBills Invoices" loading="lazy">
+              </div>
             </div>
             <div class="desktop-stand"></div>
           </div>
@@ -109,6 +113,11 @@
             <div class="phone-screen">
               <img src="screenshots/mobile_1.jpg" alt="MyBills Mobile App" loading="eager">
             </div>
+          </div>
+          <!-- Slide indicators -->
+          <div class="slide-dots" id="slideDots">
+            <span class="slide-dot active" onclick="slideTo(0)"></span>
+            <span class="slide-dot" onclick="slideTo(1)"></span>
           </div>
         </div>
       </div>

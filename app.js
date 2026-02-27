@@ -285,4 +285,28 @@
     }
   });
 
+  // ── Desktop Screenshot Slider ──
+  let slideIndex = 0;
+  const slideCount = 2;
+  let slideTimer;
+
+  window.slideTo = function (index) {
+    slideIndex = index;
+    const slider = document.getElementById('desktopSlider');
+    const dots = document.querySelectorAll('.slide-dot');
+    if (!slider) return;
+    slider.style.transform = 'translateX(-' + (index * 100) + '%)';
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === index);
+    });
+    clearInterval(slideTimer);
+    slideTimer = setInterval(autoSlide, 5000);
+  };
+
+  function autoSlide() {
+    window.slideTo((slideIndex + 1) % slideCount);
+  }
+
+  slideTimer = setInterval(autoSlide, 5000);
+
 })();
