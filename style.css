@@ -356,133 +356,88 @@ body {
   justify-content: center;
   animation: fadeInRight 1s ease-out 0.3s both;
 }
-.hero-phone-mockup {
-  width: 320px;
-  height: 640px;
-  background: var(--navy);
-  border-radius: 40px;
-  padding: 12px;
-  box-shadow: var(--shadow-xl), 0 0 80px rgba(22, 199, 154, 0.15);
+
+/* ── Device Showcase ── */
+.device-showcase {
   position: relative;
-  overflow: hidden;
-  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.hero-phone-mockup:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-}
-.hero-phone-screen {
   width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  overflow: hidden;
-  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 15%, var(--grey-50) 15%);
+  max-width: 580px;
+}
+.desktop-frame {
   position: relative;
+  width: 100%;
 }
-.hero-phone-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 28px;
+.desktop-bezel {
   background: var(--navy);
-  border-radius: 0 0 16px 16px;
-  z-index: 10;
-}
-.hero-phone-content {
-  padding: 48px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: 100%;
-}
-.mock-header {
-  text-align: center;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 8px 0 16px;
-}
-.mock-card {
-  background: white;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: var(--shadow-sm);
-}
-.mock-stat-row {
-  display: flex;
-  gap: 10px;
-}
-.mock-stat {
-  flex: 1;
-  border-radius: 12px;
-  padding: 14px 12px;
-  text-align: center;
-}
-.mock-stat.green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #065F46; }
-.mock-stat.orange { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #92400E; }
-.mock-stat.purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: #5B21B6; }
-.mock-stat-val { font-size: 20px; font-weight: 800; }
-.mock-stat-label { font-size: 10px; font-weight: 600; opacity: 0.7; margin-top: 2px; }
-.mock-invoice-row {
+  border-radius: 12px 12px 0 0;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--grey-100);
 }
-.mock-invoice-dot {
-  width: 8px;
-  height: 8px;
+.desktop-dots {
+  display: flex;
+  gap: 6px;
+}
+.desktop-dots .dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin-right: 12px;
 }
-.mock-invoice-dot.paid { background: var(--teal); }
-.mock-invoice-dot.pending { background: var(--orange); }
-.mock-invoice-text {
-  flex: 1;
+.desktop-dots .dot.red { background: #FF5F57; }
+.desktop-dots .dot.yellow { background: #FFBD2E; }
+.desktop-dots .dot.green { background: #28CA41; }
+.desktop-screen {
+  border: 3px solid var(--navy);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  background: var(--grey-100);
+  line-height: 0;
 }
-.mock-invoice-name { font-size: 12px; font-weight: 600; color: var(--grey-800); }
-.mock-invoice-sub { font-size: 10px; color: var(--grey-400); }
-.mock-invoice-amount { font-size: 13px; font-weight: 700; color: var(--navy); }
-.floating-badge {
+.desktop-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.desktop-stand {
+  width: 30%;
+  height: 18px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--navy), var(--grey-700));
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+}
+.phone-frame {
   position: absolute;
-  background: white;
-  border-radius: 14px;
-  padding: 12px 18px;
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  animation: floatBadge 3s ease-in-out infinite;
+  bottom: -10px;
+  right: -30px;
+  width: 140px;
+  background: var(--navy);
+  border-radius: 22px;
+  padding: 8px;
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(22, 199, 154, 0.2);
   z-index: 5;
 }
-.floating-badge.top-right {
-  top: 60px;
-  right: -40px;
-  animation-delay: 0.5s;
+.phone-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 16px;
+  background: var(--navy);
+  border-radius: 0 0 10px 10px;
+  z-index: 10;
 }
-.floating-badge.bottom-left {
-  bottom: 80px;
-  left: -40px;
-  animation-delay: 1.5s;
+.phone-screen {
+  border-radius: 16px;
+  overflow: hidden;
+  line-height: 0;
+  background: var(--grey-100);
 }
-.floating-badge-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
-.floating-badge-icon.green { background: #D1FAE5; }
-.floating-badge-icon.blue { background: #DBEAFE; }
-.floating-badge-text { font-size: 12px; font-weight: 600; color: var(--grey-700); }
-.floating-badge-sub { font-size: 10px; color: var(--grey-400); }
-@keyframes floatBadge {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.phone-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -1104,10 +1059,9 @@ section {
   .hero-sub { margin: 0 auto 36px; }
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .hero-visual { order: -1; }
-  .hero-phone-mockup { width: 260px; height: 520px; transform: none; }
-  .hero-phone-mockup:hover { transform: none; }
-  .floating-badge { display: none; }
+  .hero-visual { order: 1; }
+  .device-showcase { max-width: 480px; margin: 0 auto; }
+  .phone-frame { width: 120px; right: -15px; bottom: -8px; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .download-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1139,9 +1093,22 @@ section {
   .features-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
   .download-grid { grid-template-columns: 1fr 1fr; }
+  .device-showcase { max-width: 400px; }
+  .phone-frame { width: 100px; right: -10px; bottom: -5px; padding: 6px; border-radius: 16px; }
+  .phone-notch { width: 40px; height: 12px; border-radius: 0 0 8px 8px; top: 6px; }
+  .phone-screen { border-radius: 12px; }
+  .desktop-bezel { padding: 8px 12px; border-radius: 10px 10px 0 0; }
+  .desktop-dots .dot { width: 8px; height: 8px; }
+  .desktop-stand { height: 14px; }
 }
 
 @media (max-width: 480px) {
   .download-grid { grid-template-columns: 1fr; }
-  .hero-phone-mockup { width: 220px; height: 440px; }
+  .device-showcase { max-width: 320px; }
+  .phone-frame { width: 80px; right: -5px; bottom: 0; padding: 5px; border-radius: 14px; }
+  .phone-notch { width: 30px; height: 10px; top: 5px; }
+  .phone-screen { border-radius: 10px; }
+  .desktop-bezel { padding: 6px 10px; border-radius: 8px 8px 0 0; }
+  .desktop-dots .dot { width: 7px; height: 7px; }
+  .desktop-stand { height: 12px; }
 }
