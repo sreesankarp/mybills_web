@@ -445,8 +445,13 @@ body {
   line-height: 0;
   background: var(--grey-100);
 }
-.phone-screen img {
+.phone-slider {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.phone-slider img {
   width: 100%;
+  flex-shrink: 0;
   height: auto;
   display: block;
 }

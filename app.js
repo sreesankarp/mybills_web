@@ -285,17 +285,23 @@
     }
   });
 
-  // ── Desktop Screenshot Slider ──
+  // ── Desktop & Phone Screenshot Slider ──
   let slideIndex = 0;
-  const slideCount = 2;
+  const desktopCount = 3;
+  const phoneCount = 6;
   let slideTimer;
 
   window.slideTo = function (index) {
     slideIndex = index;
-    const slider = document.getElementById('desktopSlider');
+    const dSlider = document.getElementById('desktopSlider');
+    const pSlider = document.getElementById('phoneSlider');
     const dots = document.querySelectorAll('.slide-dot');
-    if (!slider) return;
-    slider.style.transform = 'translateX(-' + (index * 100) + '%)';
+    if (dSlider) dSlider.style.transform = 'translateX(-' + (index * 100) + '%)';
+    // Phone cycles through its 6 images (2 per desktop slide)
+    if (pSlider) {
+      var phoneIdx = (index * 2) % phoneCount;
+      pSlider.style.transform = 'translateX(-' + (phoneIdx * 100) + '%)';
+    }
     dots.forEach(function (d, i) {
       d.classList.toggle('active', i === index);
     });
@@ -304,7 +310,7 @@
   };
 
   function autoSlide() {
-    window.slideTo((slideIndex + 1) % slideCount);
+    window.slideTo((slideIndex + 1) % desktopCount);
   }
 
   slideTimer = setInterval(autoSlide, 5000);
