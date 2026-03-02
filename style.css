@@ -705,6 +705,26 @@ section {
   box-shadow: 0 4px 16px var(--teal-glow);
   transform: translateY(-1px);
 }
+.download-card.available .download-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.download-card.available .download-btn-secondary:hover {
+  background: var(--teal);
+  color: white;
+  transform: translateY(-1px);
+}
 .smartscreen-link {
   display: inline-flex;
   align-items: center;
