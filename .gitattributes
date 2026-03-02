@@ -1,0 +1,2 @@
+downloads/MyBills.apk filter=lfs diff=lfs merge=lfs -text
+downloads/MyBills-Setup.exe filter=lfs diff=lfs merge=lfs -text
