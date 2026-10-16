@@ -29,7 +29,6 @@
     "operatingSystem": "Android, Windows",
     "applicationCategory": "BusinessApplication",
     "description": "GST invoicing app with professional templates, GSTR-1 exports and encrypted Google Drive sync.",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
     "url": "https://mybills.co.in/"
   }
   </script>
@@ -45,7 +44,7 @@
       <a href="#design">Design</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
-      <a href="#download" class="btn btn-dark btn-sm">Download</a>
+      <a href="#download" class="btn btn-dark btn-sm">Free trial</a>
     </nav>
   </div>
 </header>
@@ -61,13 +60,14 @@
         <div class="hero-cta">
           <a class="btn btn-dark" href="#download">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3V5.5zm0 13 7.5 1.1v-7H3v5.9zm8.4 1.2L21 21v-8.4h-9.6v7.1zm0-15.4v7.2H21V3l-9.6 1.3z"/></svg>
-            <span class="stack"><small>Download for</small>Windows</span>
+            <span class="stack"><small>Free trial for</small>Windows</span>
           </a>
           <a class="btn btn-ghost" href="#download">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.13c-1.79 0-3.47.38-4.92 1.01L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
-            <span class="stack"><small>Download for</small>Android</span>
+            <span class="stack"><small>Free trial for</small>Android</span>
           </a>
         </div>
+        <p class="hero-note">30-day free trial · no card needed · <a href="#premium">Premium coming soon</a></p>
         <div class="trust">
           <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>CGST · SGST · IGST</span>
           <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>GSTR-1 JSON export</span>
@@ -237,9 +237,9 @@
   <section id="download" style="padding-top:0">
     <div class="wrap">
       <div class="section-head center reveal">
-        <span class="eyebrow">Get MyBills</span>
-        <h2>Free during early access.</h2>
-        <p>Install on Windows and Android, sign in with the same Google account, and everything stays in sync.</p>
+        <span class="eyebrow">30-day free trial</span>
+        <h2>Try every feature free for 30 days.</h2>
+        <p>Install on Windows and Android and sign in with the same Google account — everything stays in sync. Your 30 days start the first time you use MyBills and cover all your devices.</p>
       </div>
       <div class="dl-grid">
         <div class="card dl reveal">
@@ -253,7 +253,7 @@
           </ul>
           <a class="btn btn-dark" href="https://github.com/sreesankarp/mybills_web/releases/latest/download/MyBills-Windows.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download for Windows
+            Download 30-day trial
           </a>
         </div>
         <div class="card dl reveal">
@@ -267,9 +267,17 @@
           </ul>
           <a class="btn btn-dark" href="https://github.com/sreesankarp/mybills_web/releases/latest/download/MyBills-Android.apk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download for Android
+            Download 30-day trial
           </a>
         </div>
+      </div>
+      <div class="card premium reveal" id="premium">
+        <div class="premium-copy">
+          <span class="badge">Coming soon</span>
+          <h3>MyBills Premium</h3>
+          <p>Keep invoicing after your trial with unlimited documents, every template and design option, multi-device sync and GST exports. Everything you create during the trial stays in your Google Drive and carries straight over.</p>
+        </div>
+        <a class="btn btn-ghost" href="mailto:skripter14@gmail.com?subject=Notify%20me%20about%20MyBills%20Premium">Notify me</a>
       </div>
       <p class="note center" style="margin-top:18px">By downloading or using MyBills you agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
@@ -289,7 +297,8 @@
         <details class="reveal"><summary>What if I create invoices on two devices at the same time?</summary><p>Each device numbers in its own series (for example INV/25-26/A/0001 and INV/25-26/B/0001), so numbers can never clash — even offline. GST rules allow multiple invoice series.</p></details>
         <details class="reveal"><summary>Is MyBills a replacement for my accountant?</summary><p>MyBills calculates taxes and prepares GST reports from the invoices you create, but you remain responsible for the accuracy of your invoices and returns. We recommend reviewing filings with your tax professional.</p></details>
         <details class="reveal"><summary>How do I delete my data?</summary><p>In the app, go to Settings → Data &amp; backup → Delete cloud data, then sign out and choose to remove data from the device. You can also revoke MyBills' access at <a href="https://myaccount.google.com/permissions" rel="noopener" target="_blank">myaccount.google.com/permissions</a>. See the <a href="privacy.html#deletion">Privacy Policy</a> for details.</p></details>
-        <details class="reveal"><summary>Will MyBills stay free?</summary><p>MyBills is free during early access. We plan to introduce an optional paid plan with advanced features later; we'll announce pricing clearly in advance and the core invoicing you rely on will keep working.</p></details>
+        <details class="reveal"><summary>How does the free trial work?</summary><p>Every feature is unlocked for 30 days, starting the first time you use MyBills. The trial belongs to your Google account, so it covers your phone and PC together. No payment details are needed.</p></details>
+        <details class="reveal"><summary>What happens when the trial ends?</summary><p>The app stops opening until you upgrade to MyBills Premium, which is coming soon. Your invoices, clients and settings are not deleted — they stay encrypted in your own Google Drive and are ready when you upgrade. You can still remove them at any time from your Google account.</p></details>
       </div>
     </div>
   </section>
