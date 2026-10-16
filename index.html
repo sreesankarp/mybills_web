@@ -1,522 +1,314 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-IN" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyBills — Professional GST Invoicing for Indian Businesses</title>
-  <meta name="description" content="Create beautiful, GST-compliant invoices in seconds. 17 PDF templates, 23 Indian languages, AI bill scanner, payment tracking. Free for Android & Windows.">
-  <meta name="keywords" content="GST invoice app, billing software India, invoice generator, GST billing, free invoice app, Android invoice, Windows billing">
-  <meta name="author" content="GTR911">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="MyBills — Professional GST Invoicing">
-  <meta property="og:description" content="Create beautiful, GST-compliant invoices in seconds. 17 templates, 23 languages. Free.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyBills — Beautiful GST invoicing for Android &amp; Windows</title>
+  <meta name="description" content="Create GST-compliant invoices, estimates and credit notes in seconds. Professional templates, live design studio, GSTR-1 exports, and encrypted sync through your own Google Drive. For Android and Windows.">
+  <meta name="theme-color" content="#eef0f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://mybills.co.in/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gtr911.github.io/MyBills/">
-
-  <!-- Fonts -->
+  <meta property="og:site_name" content="MyBills">
+  <meta property="og:title" content="MyBills — Beautiful GST invoicing">
+  <meta property="og:description" content="GST invoices in seconds, six professional templates, GSTR-1 exports and encrypted sync through your own Google Drive.">
+  <meta property="og:url" content="https://mybills.co.in/">
+  <meta property="og:image" content="https://mybills.co.in/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon (inline SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyBills",
+    "operatingSystem": "Android, Windows",
+    "applicationCategory": "BusinessApplication",
+    "description": "GST invoicing app with professional templates, GSTR-1 exports and encrypted Google Drive sync.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "url": "https://mybills.co.in/"
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ═══════════ NAVBAR ═══════════ -->
-  <nav class="navbar" id="navbar">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">M</div>
-      MyBills
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#templates" data-i18n="nav_templates">Templates</a>
-      <a href="#download" data-i18n="nav_download">Download</a>
-      <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
-      <a href="#languages" data-i18n="nav_languages">Languages</a>
-      <select class="nav-lang-select" id="langSelect" aria-label="Select Language"></select>
-      <a href="#download" class="nav-cta" data-i18n="hero_cta">Download Free</a>
-    </div>
-    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="MyBills home"><img src="assets/img/icon.png" alt="" width="34" height="34">MyBills</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#design">Design</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="#download" class="btn btn-dark btn-sm">Download</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ═══════════ HERO ═══════════ -->
-  <section class="hero" id="hero">
-    <div class="particles" id="particles"></div>
-    <div class="hero-inner">
-
-      <!-- Left: Copy -->
-      <div class="hero-content">
-        <div class="hero-badge" data-i18n="hero_badge">Trusted by Indian businesses</div>
-        <h1>
-          <span data-i18n="hero_tagline_before">Professional invoicing,</span><br>
-          <span class="gradient-text" data-i18n="hero_tagline_highlight">simplified.</span>
-        </h1>
-        <p class="hero-sub" data-i18n="hero_sub">Create beautiful, GST-compliant invoices in seconds. Track expenses, manage budgets, generate financial reports, and stay GST-compliant — all from your phone or desktop.</p>
-        <div class="hero-actions">
-          <a href="#download" class="btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-i18n="hero_cta">Download Free</span>
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Your data stays in your own Google Drive</span>
+        <h1>Invoicing,<br><span class="accent">beautifully done.</span></h1>
+        <p class="lead">MyBills creates GST-compliant invoices, estimates and credit notes in seconds — with professional designs, GST reports ready for filing, and private sync across your phone and PC.</p>
+        <div class="hero-cta">
+          <a class="btn btn-dark" href="#download">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3V5.5zm0 13 7.5 1.1v-7H3v5.9zm8.4 1.2L21 21v-8.4h-9.6v7.1zm0-15.4v7.2H21V3l-9.6 1.3z"/></svg>
+            <span class="stack"><small>Download for</small>Windows</span>
           </a>
-          <a href="#features" class="btn-secondary">
-            <span data-i18n="hero_cta2">See Features</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <a class="btn btn-ghost" href="#download">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.13c-1.79 0-3.47.38-4.92 1.01L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+            <span class="stack"><small>Download for</small>Android</span>
           </a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-value count-up" data-target="17">0</div>
-            <div class="hero-stat-label" data-i18n="hero_stat1_label">PDF Templates</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value count-up" data-target="23">0</div>
-            <div class="hero-stat-label" data-i18n="hero_stat2_label">Languages</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">100%</div>
-            <div class="hero-stat-label" data-i18n="hero_stat3_label">Free to Start</div>
-          </div>
+        <div class="trust">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>CGST · SGST · IGST</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>GSTR-1 JSON export</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Works offline</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>AES-256 encrypted</span>
         </div>
       </div>
-
-      <!-- Right: Device Showcase -->
-      <div class="hero-visual">
-        <div class="device-showcase">
-          <!-- Desktop/Laptop Frame with sliding screenshots -->
-          <div class="desktop-frame">
-            <div class="desktop-bezel">
-              <div class="desktop-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <div class="desktop-title">MyBills</div>
-            </div>
-            <div class="desktop-screen">
-              <div class="desktop-slider" id="desktopSlider">
-                <img src="screenshots/desktop_1.jpg" alt="MyBills Dashboard" loading="eager">
-                <img src="screenshots/desktop_2.jpg" alt="MyBills Create Invoice" loading="lazy">
-                <img src="screenshots/desktop_3.jpg" alt="MyBills Invoices" loading="lazy">
-              </div>
-            </div>
-            <div class="desktop-stand"></div>
-          </div>
-          <!-- Phone Frame overlapping with sliding screenshots -->
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-slider" id="phoneSlider">
-                <img src="screenshots/mobile_1.jpg" alt="MyBills Mobile" loading="eager">
-                <img src="screenshots/mobile_2.jpg" alt="MyBills Mobile" loading="lazy">
-                <img src="screenshots/mobile_3.jpg" alt="MyBills Mobile" loading="lazy">
-                <img src="screenshots/mobile_4.jpg" alt="MyBills Mobile" loading="lazy">
-                <img src="screenshots/mobile_5.jpg" alt="MyBills Mobile" loading="lazy">
-                <img src="screenshots/mobile_6.jpg" alt="MyBills Mobile" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <!-- Slide indicators -->
-          <div class="slide-dots" id="slideDots">
-            <span class="slide-dot active" onclick="slideTo(0)"></span>
-            <span class="slide-dot" onclick="slideTo(1)"></span>
-            <span class="slide-dot" onclick="slideTo(2)"></span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════ FEATURES ═══════════ -->
-  <section id="features">
-    <div class="section-header reveal">
-      <h2 data-i18n="section_features">Everything you need to run your business</h2>
-      <p data-i18n="section_features_sub">From invoicing to GST compliance, financial reports to expense tracking — MyBills handles it all with zero learning curve.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon teal">📄</div>
-        <h3 data-i18n="f1_title">GST Invoicing</h3>
-        <p data-i18n="f1_desc">Create professional, GST-compliant invoices with automatic tax calculation. Choose from 17 beautifully designed PDF templates.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon orange">⚡</div>
-        <h3 data-i18n="f2_title">Flash Calculator & Cash In</h3>
-        <p data-i18n="f2_desc">POS-speed calculator with Cash In — select payment method, balance calculator, client assignment, and photo proof. Ring up sales and collect payments in seconds.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon blue">💰</div>
-        <h3 data-i18n="f3_title">Payment Tracking</h3>
-        <p data-i18n="f3_desc">Track paid, pending, and overdue invoices at a glance. Never miss a payment with smart status tracking.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon purple">🤖</div>
-        <h3 data-i18n="f4_title">AI Bill Scanner</h3>
-        <p data-i18n="f4_desc">Scan purchase bills with your camera. Our AI powered by Google Gemini extracts vendor, items, and amounts automatically.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon teal">☁️</div>
-        <h3 data-i18n="f5_title">Smart Cloud Sync</h3>
-        <p data-i18n="f5_desc">Auto-backup to Google Drive on every change with real-time sync status icon. Get storage alerts and backup reminders — your data is always safe.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon pink">👥</div>
-        <h3 data-i18n="f6_title">Client Management</h3>
-        <p data-i18n="f6_desc">Manage clients with complete history, statements of account, and per-client tax configuration.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon indigo">📋</div>
-        <h3 data-i18n="f7_title">Estimates & Quotations</h3>
-        <p data-i18n="f7_desc">Create professional quotations, track their status, and convert accepted estimates to invoices instantly.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon orange">📊</div>
-        <h3 data-i18n="f8_title">Dashboard & Analytics</h3>
-        <p data-i18n="f8_desc">Revenue trends, collection rates, top clients, cash flow summary — see your business health at a glance.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon blue">🌐</div>
-        <h3 data-i18n="f9_title">23 Indian Languages</h3>
-        <p data-i18n="f9_desc">Full localization in 23 languages including Hindi, Tamil, Bengali, Telugu, Marathi, and more. Invoice in your language.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon purple">📱</div>
-        <h3 data-i18n="f10_title">Multi-Device Support</h3>
-        <p data-i18n="f10_desc">Unique device codes prevent duplicate invoice numbers across multiple phones and computers.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon teal">🏷️</div>
-        <h3 data-i18n="f11_title">Product Catalog</h3>
-        <p data-i18n="f11_desc">Maintain your products and services catalog with HSN/SAC codes, pricing, and quick add to invoices.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon pink">📤</div>
-        <h3 data-i18n="f12_title">GST Filing Export</h3>
-        <p data-i18n="f12_desc">Export monthly or quarterly GST data directly to Google Drive — ready for your accountant.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon teal">💳</div>
-        <h3 data-i18n="f13_title">UPI QR Payments</h3>
-        <p data-i18n="f13_desc">Upload your UPI QR code and display it on invoices. Toggle per-client or per-invoice. Accept digital payments effortlessly.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon indigo">🖨️</div>
-        <h3 data-i18n="f14_title">Desktop Print Studio</h3>
-        <p data-i18n="f14_desc">Optimized desktop print workflow — Print, Download PDF, Share PDF, or Save with dedicated buttons. Professional output in one click.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon pink">💸</div>
-        <h3 data-i18n="f15_title">Expense & Vendor Management</h3>
-        <p data-i18n="f15_desc">Track business expenses by category and payment mode. Manage vendors with outstanding balances, and auto-generate recurring expenses.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon orange">🏛️</div>
-        <h3 data-i18n="f16_title">GST Compliance Suite</h3>
-        <p data-i18n="f16_desc">GSTR-3B summary, GSTR-2 purchase register, GSTR-9 annual return, TDS tracking, RCM reports, and HSN-wise summaries — all auto-calculated.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon blue">📈</div>
-        <h3 data-i18n="f17_title">Financial Reports</h3>
-        <p data-i18n="f17_desc">Cash Flow Statement, Balance Sheet, Profit & Loss — complete financial statements with drill-down details and export capability.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-icon purple">🎯</div>
-        <h3 data-i18n="f18_title">Budget vs Actuals</h3>
-        <p data-i18n="f18_desc">Set monthly budgets by expense category and track spending with visual progress bars and utilization gauges. Stay on top of your finances.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon teal">🔄</div>
-        <h3 data-i18n="f19_title">Recurring & Batch Invoicing</h3>
-        <p data-i18n="f19_desc">Auto-generate recurring invoices and expenses on schedule. Batch-create invoices for multiple clients at once. Credit notes, proformas, delivery challans included.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon indigo">🚚</div>
-        <h3 data-i18n="f20_title">E-Way Bill Tracker</h3>
-        <p data-i18n="f20_desc">Track e-way bills with transport details, vehicle info, and auto-validity. Monitor active and expired bills with distance and transporter data.</p>
+      <div class="devices" aria-hidden="true">
+        <div class="desktop-shot"><img src="assets/img/desktop_home.webp" alt="" width="1600" height="1000" loading="eager"></div>
+        <div class="phone"><div class="screen"><div class="status"><span>9:41</span><span>●●● ▮</span></div><img src="assets/img/phone_home.webp" alt="MyBills home screen on a phone" width="720" height="1558"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ TEMPLATES ═══════════ -->
-  <section id="templates">
-    <div class="section-header reveal">
-      <h2 data-i18n="section_templates">17 Stunning PDF Templates</h2>
-      <p data-i18n="section_templates_sub">From Modern to Classic, Elegant to Bold — pick the template that matches your brand.</p>
-    </div>
-    <div class="template-marquee-wrap" style="overflow:hidden;">
-      <div class="template-marquee" id="templateMarquee">
-        <!-- Doubled for seamless loop -->
-        <div class="template-chip">✨ Modern</div>
-        <div class="template-chip">🏛️ Classic</div>
-        <div class="template-chip">◻️ Minimal</div>
-        <div class="template-chip">👔 Executive</div>
-        <div class="template-chip">🏢 Corporate</div>
-        <div class="template-chip">💎 Elegant</div>
-        <div class="template-chip">🔥 Bold</div>
-        <div class="template-chip">📐 Professional</div>
-        <div class="template-chip">🎨 Creative</div>
-        <div class="template-chip">🚀 Startup</div>
-        <div class="template-chip">⭐ Premium</div>
-        <div class="template-chip">🧊 Clean</div>
-        <div class="template-chip">📎 Formal</div>
-        <div class="template-chip">📄 Layout B</div>
-        <div class="template-chip">📃 Layout C</div>
-        <div class="template-chip">📑 Layout D</div>
-        <div class="template-chip">📝 Layout E</div>
-        <!-- Repeat for infinite scroll -->
-        <div class="template-chip">✨ Modern</div>
-        <div class="template-chip">🏛️ Classic</div>
-        <div class="template-chip">◻️ Minimal</div>
-        <div class="template-chip">👔 Executive</div>
-        <div class="template-chip">🏢 Corporate</div>
-        <div class="template-chip">💎 Elegant</div>
-        <div class="template-chip">🔥 Bold</div>
-        <div class="template-chip">📐 Professional</div>
-        <div class="template-chip">🎨 Creative</div>
-        <div class="template-chip">🚀 Startup</div>
-        <div class="template-chip">⭐ Premium</div>
-        <div class="template-chip">🧊 Clean</div>
-        <div class="template-chip">📎 Formal</div>
-        <div class="template-chip">📄 Layout B</div>
-        <div class="template-chip">📃 Layout C</div>
-        <div class="template-chip">📑 Layout D</div>
-        <div class="template-chip">📝 Layout E</div>
-      </div>
-    </div>
-    <div class="template-count reveal">
-      <span class="count-up" data-target="17">0</span>
-      <p>GST-compliant, print-ready templates — and growing</p>
-    </div>
-  </section>
-
-  <!-- ═══════════ DOWNLOAD ═══════════ -->
-  <section id="download">
-    <div class="section-header reveal">
-      <h2 data-i18n="section_download">Download MyBills</h2>
-      <p data-i18n="section_download_sub">Available on Android and Windows. Free to start, no credit card required.</p>
-    </div>
-    <div class="download-grid">
-      <!-- Android -->
-      <div class="download-card available reveal reveal-delay-1" onclick="window.open('https://play.google.com/store/apps/details?id=com.gtr911.invoix','_blank')">
-        <div class="download-card-icon android">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#34A853"><path d="M17.523 2.417l-1.964 3.403A8.96 8.96 0 0012 4.5a8.96 8.96 0 00-3.559 1.32L6.477 2.417a.5.5 0 10-.866.5L7.55 6.22A9.03 9.03 0 003 14h18a9.03 9.03 0 00-4.55-7.78l1.94-3.303a.5.5 0 10-.867-.5zM8.5 11a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zM3 15.5v5A1.5 1.5 0 004.5 22h1A1.5 1.5 0 007 20.5V15.5H3zm14 0v5a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5V15.5h-4z"/></svg>
-        </div>
-        <h3 data-i18n="dl_android">Android</h3>
-        <p data-i18n="dl_android_sub">Get it on Google Play</p>
-        <a href="https://play.google.com/store/apps/details?id=com.gtr911.invoix" target="_blank" class="download-btn" onclick="event.stopPropagation()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Google Play
-        </a>
-        <a href="https://github.com/sreesankarp/mybills_web/releases/download/v1.3.1/MyBills.apk" class="download-btn-secondary" onclick="event.stopPropagation()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download APK
-        </a>
-      </div>
-
-      <!-- Windows -->
-      <div class="download-card available reveal reveal-delay-2" onclick="window.location.href='downloads/MyBills-Setup.exe'">
-        <div class="download-card-icon windows">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#0078D4"><path d="M3 12V6.5l8-1.1V12H3zm9-6.8V12h9V4l-9 1.2zM12 13v6.7L21 21v-8h-9zm-1 0H3v5.5l8 1.1V13z"/></svg>
-        </div>
-        <h3 data-i18n="dl_windows">Windows</h3>
-        <p data-i18n="dl_windows_sub">Download for PC</p>
-        <a href="downloads/MyBills-Setup.exe" class="download-btn" onclick="event.stopPropagation()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download .exe
-        </a>
-        <a href="#" class="smartscreen-link" onclick="event.stopPropagation(); document.getElementById('smartscreen-modal').classList.add('active'); return false;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <span data-i18n="dl_smartscreen_link">Windows install guide</span>
-        </a>
-      </div>
-
-      <!-- macOS -->
-      <div class="download-card coming-soon reveal reveal-delay-3">
-        <div class="download-card-icon macos">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#555"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        </div>
-        <h3 data-i18n="dl_macos">macOS</h3>
-        <p data-i18n="dl_macos_sub">Coming Soon</p>
-        <span class="badge-coming" data-i18n="dl_coming">Coming Soon</span>
-      </div>
-
-      <!-- Linux -->
-      <div class="download-card coming-soon reveal reveal-delay-4">
-        <div class="download-card-icon linux">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.17.333.472.467.766.556l.048.016c.267.094.56.197.868.42.34.249.666.589 1.138.717.238.065.478.063.716.011a2.51 2.51 0 00.691-.228c.121-.057.24-.122.366-.146.165-.028.363-.004.578.072.163.045.332.063.504.054l.025-.001c.088-.003.177-.011.266-.024a2.25 2.25 0 00.543-.152c.053-.021.107-.039.161-.05a.93.93 0 01.189-.019c.071-.001.143.007.217.018a4.62 4.62 0 01.555.131c.252.068.514.095.782.064.438-.05.862-.298 1.122-.694.127-.179.253-.398.349-.645.093-.225.18-.537.284-.756.183-.398.525-.6.844-.775.297-.158.601-.32.681-.636a.455.455 0 00-.021-.282.55.55 0 00-.146-.224c-.088-.085-.186-.17-.268-.263-.103-.101-.21-.265-.3-.449-.093-.173-.194-.4-.249-.66-.033-.198-.36-3.083-.555-3.718-.25-.81-.53-1.473-.83-2.058-.299-.579-.62-1.076-1.027-1.554-.749-.88-1.32-1.78-1.413-2.957-.052-.668.238-1.358.58-2.091 1.183-2.551 2.046-5.072-.11-6.87A4.225 4.225 0 0012.504 0z"/></svg>
-        </div>
-        <h3 data-i18n="dl_linux">Linux</h3>
-        <p data-i18n="dl_linux_sub">Coming Soon</p>
-        <span class="badge-coming" data-i18n="dl_coming">Coming Soon</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ PRICING ═══════════ -->
-  <section id="pricing">
-    <div class="section-header reveal">
-      <h2 data-i18n="section_pricing">Simple, transparent pricing</h2>
-      <p data-i18n="section_pricing_sub">Start free. Upgrade when you're ready.</p>
-    </div>
-    <div class="pricing-grid">
-      <!-- Free -->
-      <div class="pricing-card reveal reveal-delay-1">
-        <h3 data-i18n="pricing_free">Free</h3>
-        <div class="pricing-price" data-i18n="pricing_free_price">₹0</div>
-        <div class="pricing-desc" data-i18n="pricing_free_desc">Perfect for getting started</div>
-        <ul class="pricing-features">
-          <li data-i18n="pricing_f1">Up to 10 invoices (ad-free)</li>
-          <li data-i18n="pricing_f2">Up to 30 invoices total</li>
-          <li data-i18n="pricing_f3">All 17 PDF templates</li>
-          <li data-i18n="pricing_f4">Client & product management</li>
-          <li data-i18n="pricing_f5">Google Drive backup</li>
-          <li data-i18n="pricing_f6">23 languages</li>
-        </ul>
-      </div>
-      <!-- Premium -->
-      <div class="pricing-card premium reveal reveal-delay-2">
-        <h3 data-i18n="pricing_premium">Premium</h3>
-        <div class="pricing-price" data-i18n="pricing_premium_price">Affordable</div>
-        <div class="pricing-desc" data-i18n="pricing_premium_desc">For growing businesses</div>
-        <ul class="pricing-features">
-          <li data-i18n="pricing_p1">Unlimited invoices & estimates</li>
-          <li data-i18n="pricing_p2">No ads ever</li>
-          <li data-i18n="pricing_p3">Priority support</li>
-          <li data-i18n="pricing_p4">All free features included</li>
-          <li data-i18n="pricing_p5">Desktop app access</li>
-          <li data-i18n="pricing_p6">GST filing export</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ LANGUAGES ═══════════ -->
-  <section id="languages">
-    <div class="section-header reveal">
-      <h2 data-i18n="section_languages">Available in 23 Indian Languages</h2>
-      <p data-i18n="section_languages_sub">We believe every business owner deserves tools in their own language.</p>
-    </div>
-    <div class="languages-grid reveal" id="languagesGrid">
-      <!-- Populated by JS -->
-    </div>
-  </section>
-
-  <!-- ═══════════ FINAL CTA ═══════════ -->
-  <section class="cta-section">
-    <div class="reveal">
-      <h2 data-i18n="section_cta">Ready to simplify your billing?</h2>
-      <p data-i18n="section_cta_sub">Join thousands of Indian businesses using MyBills. Download now — it's free.</p>
-      <a href="#download" class="btn-primary">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <span data-i18n="cta_button">Download Now</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ═══════════ SMARTSCREEN MODAL ═══════════ -->
-  <div id="smartscreen-modal" class="ss-modal-overlay" onclick="if(event.target===this)this.classList.remove('active')">
-    <div class="ss-modal">
-      <button class="ss-modal-close" onclick="document.getElementById('smartscreen-modal').classList.remove('active')" aria-label="Close">&times;</button>
-      <h2 class="ss-modal-title" data-i18n="ss_modal_title">Windows Installation Guide</h2>
-      <p class="ss-modal-subtitle" data-i18n="ss_modal_subtitle">Windows SmartScreen may show a warning for new apps. Follow these simple steps to install MyBills safely.</p>
-
-      <div class="ss-steps">
-        <!-- Step 1 -->
-        <div class="ss-step">
-          <div class="ss-step-number">1</div>
-          <div class="ss-step-content">
-            <h3 data-i18n="ss_step1_title">SmartScreen Warning Appears</h3>
-            <p data-i18n="ss_step1_desc">After downloading, you may see "Windows protected your PC". This is normal for new apps.</p>
-            <div class="ss-step-img">
-              <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="220" rx="8" fill="#4A1A8A"/>
-                <text x="30" y="40" font-size="18" font-weight="bold" fill="white">Windows protected your PC</text>
-                <text x="30" y="68" font-size="11" fill="#ddd">Microsoft Defender SmartScreen prevented an</text>
-                <text x="30" y="84" font-size="11" fill="#ddd">unrecognized app from starting. Running this app</text>
-                <text x="30" y="100" font-size="11" fill="#ddd">might put your PC at risk.</text>
-                <text x="30" y="124" font-size="11" fill="#7CB3FF" text-decoration="underline" class="ss-highlight-text">More info</text>
-                <rect x="280" y="180" width="100" height="30" rx="2" fill="#555"/>
-                <text x="304" y="200" font-size="12" fill="white">Don't run</text>
-                <!-- Arrow pointing to More info -->
-                <circle cx="105" cy="120" r="18" fill="none" stroke="#FF6B6B" stroke-width="2.5" stroke-dasharray="4,3"/>
-                <path d="M130 120 L145 120" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrowRed)"/>
-                <text x="150" y="124" font-size="11" font-weight="bold" fill="#FF6B6B" data-i18n="ss_click_here">← Click here</text>
-                <defs><marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF6B6B"/></marker></defs>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="ss-step">
-          <div class="ss-step-number">2</div>
-          <div class="ss-step-content">
-            <h3 data-i18n="ss_step2_title">Click "Run anyway"</h3>
-            <p data-i18n="ss_step2_desc">After clicking "More info", a "Run anyway" button will appear. Click it to start the installation.</p>
-            <div class="ss-step-img">
-              <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="250" rx="8" fill="#4A1A8A"/>
-                <text x="30" y="40" font-size="18" font-weight="bold" fill="white">Windows protected your PC</text>
-                <text x="30" y="68" font-size="11" fill="#ddd">Microsoft Defender SmartScreen prevented an</text>
-                <text x="30" y="84" font-size="11" fill="#ddd">unrecognized app from starting. Running this app</text>
-                <text x="30" y="100" font-size="11" fill="#ddd">might put your PC at risk.</text>
-                <text x="30" y="128" font-size="11" fill="#ccc">App: MyBills-Setup.exe</text>
-                <text x="30" y="148" font-size="11" fill="#ccc">Publisher: Unknown publisher</text>
-                <rect x="160" y="200" width="110" height="32" rx="2" fill="#555"/>
-                <text x="180" y="221" font-size="12" fill="white">Run anyway</text>
-                <rect x="280" y="200" width="100" height="32" rx="2" fill="#555"/>
-                <text x="304" y="221" font-size="12" fill="white">Don't run</text>
-                <!-- Arrow pointing to Run anyway -->
-                <circle cx="215" cy="216" r="24" fill="none" stroke="#4ADE80" stroke-width="2.5" stroke-dasharray="4,3"/>
-                <path d="M215 245 L215 260" stroke="#4ADE80" stroke-width="2"/>
-                <text x="175" y="278" font-size="11" font-weight="bold" fill="#4ADE80" data-i18n="ss_click_this">↑ Click this button</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="ss-step">
-          <div class="ss-step-number">3</div>
-          <div class="ss-step-content">
-            <h3 data-i18n="ss_step3_title">Installation Starts!</h3>
-            <p data-i18n="ss_step3_desc">The MyBills installer will open. Choose your install location and follow the setup wizard. That's it!</p>
-            <div class="ss-step-img ss-step-success">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span data-i18n="ss_step3_ready">MyBills is ready to use!</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button class="ss-modal-download" onclick="window.location.href='downloads/MyBills-Setup.exe'; document.getElementById('smartscreen-modal').classList.remove('active')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <span data-i18n="ss_download_btn">Download MyBills for Windows</span>
-      </button>
+  <!-- Band -->
+  <div class="band" aria-hidden="true">
+    <div class="marquee" id="marquee">
+      <span class="pill"><i style="background:#7b90ff"></i>Tax invoices</span>
+      <span class="pill"><i style="background:#1fa855"></i>Bills of supply</span>
+      <span class="pill"><i style="background:#8b5cf6"></i>Estimates &amp; proforma</span>
+      <span class="pill"><i style="background:#ec4899"></i>Credit notes</span>
+      <span class="pill"><i style="background:#f5a524"></i>UPI pay QR</span>
+      <span class="pill"><i style="background:#7b90ff"></i>Letterhead</span>
+      <span class="pill"><i style="background:#1fa855"></i>Digital signature</span>
+      <span class="pill"><i style="background:#8b5cf6"></i>HSN / SAC summary</span>
+      <span class="pill"><i style="background:#ec4899"></i>Payment tracking</span>
+      <span class="pill"><i style="background:#f5a524"></i>Excel &amp; CSV exports</span>
+      <span class="pill"><i style="background:#7b90ff"></i>Dark mode</span>
+      <span class="pill"><i style="background:#1fa855"></i>App lock</span>
     </div>
   </div>
 
-  <!-- ═══════════ FOOTER ═══════════ -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="mailto:skripter14@gmail.com" data-i18n="footer_contact">Contact</a>
-      <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-      <a href="#" data-i18n="footer_terms">Terms of Service</a>
+  <!-- Features -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Everything a professional needs</span>
+        <h2>From quote to GST return, in one calm app.</h2>
+        <p>Built for freelancers, consultants, agencies and small businesses across India.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card feature reveal">
+          <div class="icon-tile t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L5 19M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM17.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></div>
+          <h3>GST, done right</h3>
+          <p>CGST + SGST or IGST is chosen automatically from the place of supply. Tax-inclusive prices, discounts, cess, reverse charge, round-off and amount in words — all handled.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>Invoices in seconds</h3>
+          <p>Pick a client, tap your saved services, issue. GSTIN entry fills in the state and PAN; numbering, due dates, notes and terms fill themselves.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="icon-tile t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 0 0 0 20c1 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7h2a5.5 5.5 0 0 0 5.5-5.5C22 6 17.5 2 12 2z"/></svg></div>
+          <h3>A live design studio</h3>
+          <p>Six professional templates, brand colours, four typefaces, letterhead, signature and UPI QR — and you watch the real PDF change as you design.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg></div>
+          <h3>Ready for filing</h3>
+          <p>GSTR-1 (B2B, B2CL, B2CS, credit notes, exports, HSN summary, documents issued) as portal-ready JSON, plus GSTR-3B summary, Excel and CSV for your accountant.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="icon-tile t-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="13" height="10" rx="2"/><rect x="16" y="8" width="6" height="12" rx="1.5"/><path d="M5 18h7"/></svg></div>
+          <h3>Phone and PC, in sync</h3>
+          <p>Create on your phone, finish on your desktop. Each device numbers in its own series, so two invoices made at the same moment — even offline — never clash.</p>
+        </article>
+        <article class="card feature reveal">
+          <div class="icon-tile t-ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Know where you stand</h3>
+          <p>Outstanding, overdue and collected at a glance. Record full or partial payments, track receivables ageing and see your top clients.</p>
+        </article>
+      </div>
     </div>
-    <p class="footer-made" data-i18n="footer_made">Made with ❤️ in India</p>
-    <p class="footer-copy" data-i18n="footer_copyright">© 2026 MyBills. All rights reserved.</p>
-  </footer>
+  </section>
 
-  <!-- Scripts -->
-  <script src="i18n.js"></script>
-  <script src="app.js"></script>
+  <!-- Phone showcase -->
+  <section style="padding-top:0">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Designed like it matters</span>
+        <h2>An app you'll actually enjoy opening.</h2>
+        <p class="lead">Clear numbers, calm colours and one-tap actions. MyBills is crafted to feel at home next to the best apps on your phone — in light or dark mode.</p>
+        <ul class="checklist">
+          <li><span><b>Status at a glance.</b> Unpaid, partly paid, overdue and paid — every invoice tells you where it is.</span></li>
+          <li><span><b>Built for one hand.</b> A floating navigation bar and a create button always within reach.</span></li>
+          <li><span><b>A real desktop app.</b> On Windows you get a sidebar, side-by-side editing with live preview and keyboard shortcuts.</span></li>
+        </ul>
+      </div>
+      <div class="phones reveal" aria-hidden="true">
+        <div class="phone"><div class="screen"><div class="status"><span>9:41</span><span>●●● ▮</span></div><img src="assets/img/phone_invoices.webp" alt="" width="720" height="1558" loading="lazy"></div></div>
+        <div class="phone dark"><div class="screen"><div class="status"><span>9:41</span><span>●●● ▮</span></div><img src="assets/img/phone_home_dark.webp" alt="" width="720" height="1558" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Design studio -->
+  <section id="design" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Design studio</span>
+        <h2>Invoices that look like your brand.</h2>
+        <p>Choose a template, pick your colour and typeface, add your letterhead and signature — and see the actual PDF update instantly.</p>
+      </div>
+      <div class="shot reveal"><img src="assets/img/studio.webp" alt="MyBills design studio with a live invoice preview" width="1264" height="681" loading="lazy"></div>
+      <div class="templates">
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_modern.webp" alt="Modern invoice template" width="700" height="990" loading="lazy"></div><span>Modern</span></div>
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_classic.webp" alt="Classic invoice template" width="700" height="990" loading="lazy"></div><span>Classic</span></div>
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_minimal.webp" alt="Minimal invoice template" width="700" height="990" loading="lazy"></div><span>Minimal</span></div>
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_corporate.webp" alt="Corporate invoice template" width="700" height="990" loading="lazy"></div><span>Corporate</span></div>
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_elegant.webp" alt="Elegant invoice template" width="700" height="990" loading="lazy"></div><span>Elegant</span></div>
+        <div class="tpl reveal"><div class="paper"><img src="assets/img/tpl_bold.webp" alt="Bold invoice template" width="700" height="990" loading="lazy"></div><span>Bold</span></div>
+      </div>
+      <div class="swatches center" style="justify-content:center" aria-hidden="true">
+        <i style="background:#4f6bff"></i><i style="background:#111113"></i><i style="background:#1e3a8a"></i><i style="background:#0f766e"></i><i style="background:#0e9f6e"></i><i style="background:#166534"></i><i style="background:#7c3aed"></i><i style="background:#9d174d"></i><i style="background:#e11d48"></i><i style="background:#ea580c"></i><i style="background:#b45309"></i><i style="background:#a16207"></i><i style="background:#475569"></i><i style="background:#0891b2"></i>
+      </div>
+      <p class="tiny center" style="margin-top:12px">14 curated accents — or any brand colour you like.</p>
+    </div>
+  </section>
+
+  <!-- Desktop showcase -->
+  <section style="padding-top:0">
+    <div class="wrap split rev">
+      <div class="reveal">
+        <span class="eyebrow">For your desk</span>
+        <h2>A proper Windows app, not a stretched phone.</h2>
+        <p class="lead">A sidebar, master–detail lists, an editor with the live invoice beside it, a command palette and shortcuts like Ctrl+N, Ctrl+K and Ctrl+P.</p>
+        <ul class="checklist">
+          <li><span><b>GST reports</b> with month, quarter and FY filters, exported to JSON, Excel, CSV or a ZIP of PDFs.</span></li>
+          <li><span><b>Clients and catalog</b> with GSTIN checksum validation, HSN/SAC codes and product-wise tax.</span></li>
+          <li><span><b>Print, save or email</b> any document in one click.</span></li>
+        </ul>
+      </div>
+      <div class="shot reveal"><img src="assets/img/desktop_invoices.webp" alt="MyBills invoices on Windows" width="1600" height="1000" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy" style="padding-top:0">
+    <div class="wrap">
+      <div class="secure reveal">
+        <span class="eyebrow">Private by design</span>
+        <h2>Your invoices live in your Google Drive. Not on our servers.</h2>
+        <p>MyBills has no servers that store your business data. You sign in with your Google account, and MyBills keeps an encrypted copy of your data in a private, hidden app folder inside <em>your own</em> Google Drive — so it syncs between your devices and comes back automatically if you change phones.</p>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon-tile t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Encrypted with AES-256</h3>
+            <p>Every file is encrypted on your device before it is uploaded to your Drive.</p>
+          </div>
+          <div class="card">
+            <div class="icon-tile t-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+            <h3>Only its own folder</h3>
+            <p>MyBills asks Google only for access to its own app data folder. It cannot see, open or change any of your other Drive files.</p>
+          </div>
+          <div class="card">
+            <div class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9l14.2 14.2"/></svg></div>
+            <h3>No ads, no tracking</h3>
+            <p>No advertising, no analytics SDKs, no selling of data. Your clients' details are yours alone.</p>
+          </div>
+        </div>
+        <p class="tiny" style="margin-top:28px;position:relative;z-index:1;color:var(--on-band-2)">Read the full <a href="privacy.html">Privacy Policy</a> to see exactly what MyBills accesses and why.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Get MyBills</span>
+        <h2>Free during early access.</h2>
+        <p>Install on Windows and Android, sign in with the same Google account, and everything stays in sync.</p>
+      </div>
+      <div class="dl-grid">
+        <div class="card dl reveal">
+          <div class="head">
+            <div class="icon-tile t-blue"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3V5.5zm0 13 7.5 1.1v-7H3v5.9zm8.4 1.2L21 21v-8.4h-9.6v7.1zm0-15.4v7.2H21V3l-9.6 1.3z"/></svg></div>
+            <div><h3>Windows</h3><span class="tiny">Windows 10 and 11 · 64-bit</span></div>
+          </div>
+          <ul>
+            <li>Download the ZIP, extract it, and open <strong>MyBills.exe</strong>.</li>
+            <li>If Windows shows “Windows protected your PC”, choose <strong>More info → Run anyway</strong>.</li>
+          </ul>
+          <a class="btn btn-dark" href="https://github.com/sreesankarp/mybills_web/releases/latest/download/MyBills-Windows.zip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download for Windows
+          </a>
+        </div>
+        <div class="card dl reveal">
+          <div class="head">
+            <div class="icon-tile t-green"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.13c-1.79 0-3.47.38-4.92 1.01L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg></div>
+            <div><h3>Android <span class="badge">Play Store soon</span></h3><span class="tiny">Android 7.0 and newer</span></div>
+          </div>
+          <ul>
+            <li>Download the APK on your phone and open it.</li>
+            <li>If asked, allow your browser or file manager to install apps.</li>
+          </ul>
+          <a class="btn btn-dark" href="https://github.com/sreesankarp/mybills_web/releases/latest/download/MyBills-Android.apk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download for Android
+          </a>
+        </div>
+      </div>
+      <p class="note center" style="margin-top:18px">By downloading or using MyBills you agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>Why does MyBills need my Google account?</summary><p>Signing in with Google lets MyBills store an encrypted backup of your data in your own Google Drive and keep your phone and PC in sync. MyBills only requests access to its own hidden app data folder — it cannot read your other Drive files, emails or contacts.</p></details>
+        <details class="reveal"><summary>Can the MyBills team see my invoices?</summary><p>No. Your data is stored on your devices and in your own Google Drive, encrypted before upload. We do not operate servers that receive or store your business data.</p></details>
+        <details class="reveal"><summary>Does it work without internet?</summary><p>Yes. You can create, edit and issue invoices offline. Changes upload automatically when you are back online.</p></details>
+        <details class="reveal"><summary>What if I create invoices on two devices at the same time?</summary><p>Each device numbers in its own series (for example INV/25-26/A/0001 and INV/25-26/B/0001), so numbers can never clash — even offline. GST rules allow multiple invoice series.</p></details>
+        <details class="reveal"><summary>Is MyBills a replacement for my accountant?</summary><p>MyBills calculates taxes and prepares GST reports from the invoices you create, but you remain responsible for the accuracy of your invoices and returns. We recommend reviewing filings with your tax professional.</p></details>
+        <details class="reveal"><summary>How do I delete my data?</summary><p>In the app, go to Settings → Data &amp; backup → Delete cloud data, then sign out and choose to remove data from the device. You can also revoke MyBills' access at <a href="https://myaccount.google.com/permissions" rel="noopener" target="_blank">myaccount.google.com/permissions</a>. See the <a href="privacy.html#deletion">Privacy Policy</a> for details.</p></details>
+        <details class="reveal"><summary>Will MyBills stay free?</summary><p>MyBills is free during early access. We plan to introduce an optional paid plan with advanced features later; we'll announce pricing clearly in advance and the core invoicing you rely on will keep working.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="/" class="brand"><img src="assets/img/icon.png" alt="" width="34" height="34">MyBills</a>
+    <nav aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:skripter14@gmail.com">Contact</a>
+    </nav>
+    <p class="tiny">© 2026 Keralogik · Made in India</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
