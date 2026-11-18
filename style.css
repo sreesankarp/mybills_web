@@ -220,7 +220,8 @@ section { padding: 100px 0; }
 }
 .checklist b { color: var(--ink); font-weight: 600; }
 .shot { border-radius: 18px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-lg); background: var(--surface); }
-.phones { display: flex; justify-content: center; gap: 22px; }
+/* flex-start: the second phone's margin-top must not stretch the first phone's frame. */
+.phones { display: flex; justify-content: center; align-items: flex-start; gap: 22px; }
 .phones .phone { width: 260px; }
 .phones .phone:nth-child(2) { margin-top: 56px; }
 
@@ -255,7 +256,18 @@ section { padding: 100px 0; }
 .premium h3 { font-size: 22px; margin: 8px 0 6px; }
 .premium p { margin: 0; color: var(--ink-2); max-width: 640px; }
 .premium .btn { flex: none; }
-@media (max-width: 720px) { .premium { flex-direction: column; align-items: stretch; } }
+.premium .premium-how { margin-top: 14px; }
+.premium-how strong { color: var(--ink-2); }
+.plans { flex: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(100%, 420px); }
+.plan { display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 18px; border: 1px solid var(--border-strong); background: var(--surface-muted); }
+.plan.best { border: 2px solid var(--brand); padding: 17px; background: color-mix(in srgb, var(--brand) 6%, var(--surface)); }
+.plan-name { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.plan-price { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.plan-price small { font-size: 14px; font-weight: 500; color: var(--ink-3); margin-left: 2px; }
+.badge.save { color: var(--success); background: var(--success-tint); }
+.plans-note { grid-column: 1 / -1; text-align: center; }
+@media (max-width: 960px) { .premium { flex-direction: column; align-items: stretch; } .plans { width: 100%; } }
+@media (max-width: 480px) { .plans { grid-template-columns: 1fr; } }
 .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .dl { display: flex; flex-direction: column; gap: 16px; }
 .dl .head { display: flex; align-items: center; gap: 16px; }
