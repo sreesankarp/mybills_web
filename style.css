@@ -117,7 +117,7 @@ p { margin: 0; }
 .hero h1 { font-size: clamp(42px, 6vw, 72px); font-weight: 700; letter-spacing: -0.035em; margin: 18px 0; }
 .hero h1 .accent { background: linear-gradient(120deg, var(--brand), #8b5cf6 70%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero .lead { font-size: 19px; color: var(--ink-2); max-width: 560px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 22px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 14px; }
 .trust { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .devices { position: relative; height: 640px; }
@@ -250,7 +250,7 @@ section { padding: 100px 0; }
 .secure a { color: #9db0ff; }
 
 /* Download */
-.hero-note { margin: 14px 0 0; font-size: 14px; color: var(--ink-2); }
+.hero-note { margin: 0 0 18px; font-size: 14px; color: var(--ink-2); }
 .hero-note a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .premium { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 18px; }
 .premium h3 { font-size: 22px; margin: 8px 0 6px; }
@@ -273,7 +273,9 @@ section { padding: 100px 0; }
 .dl .head { display: flex; align-items: center; gap: 16px; }
 .dl h3 { font-size: 24px; }
 .dl ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 15px; display: grid; gap: 4px; }
-.dl .btn { align-self: flex-start; }
+.dl-actions { margin-top: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; padding-top: 4px; }
+.dl-actions .tiny a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
+.dl h3 .badge { vertical-align: 4px; margin-left: 4px; }
 .note { font-size: 14px; color: var(--ink-3); }
 .badge { font-size: 12px; font-weight: 600; color: var(--violet); background: color-mix(in srgb, var(--violet) 14%, transparent); padding: 4px 10px; border-radius: 999px; }
 
@@ -351,7 +353,8 @@ footer { padding: 44px 0 56px; border-top: 1px solid var(--border); }
   .hero { padding-top: 28px; }
   .hero .lead { font-size: 17px; }
   .hero-cta .btn { flex: 1 1 100%; }
-  .dl .btn { align-self: stretch; }
+  .dl-actions { flex-direction: column; align-items: stretch; }
+  .dl-actions .tiny { text-align: center; }
   .phone { width: 264px; }
   .phones .phone { width: 46%; max-width: 230px; border-radius: 30px; padding: 6px; }
   .phones .phone .screen { border-radius: 25px; }
